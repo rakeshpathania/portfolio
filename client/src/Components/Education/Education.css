@@ -1,0 +1,10 @@
+
+.education-section{
+    margin-top: 70px;
+}
+
+.degree-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

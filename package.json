@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-react",
+  "version": "1.0.0",
+  "description": "this is portfolio website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "rakesh pathania",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "http-status": "^1.6.2",
+    "joi": "^17.9.2",
+    "nodemailer": "^6.9.3",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "validatorjs": "^3.22.1"
+  }
+}

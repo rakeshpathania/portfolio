@@ -1,0 +1,102 @@
+.home {
+    height: 368px;
+    color: white;
+}
+
+.home-content h1 {
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.home-content h3 {
+    margin-top: 10px;
+    color: rgb(230, 172, 13);
+    margin-left: 9px;
+}
+
+.button-for-action {
+    display: flex;
+}
+
+.hire-me-button {
+    background-color: #ff854c;
+    text-align: center;
+    width: 180px;
+    padding: 10px;
+    border-radius: 90px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 2px solid white;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.hire-me-button:hover {
+    background-color: white;
+    width: 250px;
+    color: black;
+    transition: 1s;
+    border: 2px solid #ff854c;
+
+}
+
+.get-resume-button {
+    background-color: #e7a815;
+    text-align: center;
+    width: 180px;
+    padding: 10px;
+    border-radius: 90px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 2px solid white;
+    font-size: 17px;
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.get-resume-button:hover {
+    background-color: white;
+    width: 250px;
+    color: black;
+    transition: 1s;
+    border: 2px solid #e7a815;
+}
+
+.theme-change{
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: #001cce;
+    right: 0;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    position: fixed;
+    top: 150;
+    margin-top: 250px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sun-theme-icon{
+    animation: rotation infinite 5s linear
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1000px){
+    .theme-change{
+        display: none;
+    }
+}
