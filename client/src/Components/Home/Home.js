@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Typewriter from 'typewriter-effect';
-import rakeshcv from './rakesh_resume.pdf';
+import rakeshcv from './Rakesh-Pathania-Nodejs-resume.pdf';
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';

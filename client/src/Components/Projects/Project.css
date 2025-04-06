@@ -1,43 +1,50 @@
-
-.project-section{
+.project-section {
     margin-top: 70px;
 }
 
-.section-title{
+.section-title {
     margin-bottom: 50px;
 }
-.project-list{
+
+.project-list {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
     -webkit-box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
     -moz-box-shadow: 15px 9px 9px -2px rgba(230, 224, 224, 0.86);
+
+    /* 👇 Added to make all cards equal height */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* 👇 Optional: Ensures consistent height even for small content */
+    min-height: 350px;
 }
 
-
-#dark .project-list{
+#dark .project-list {
     background-color: #38004c;
     color: white;
     box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
     -webkit-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
-    -moz-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.    42);
+    -moz-box-shadow: -6px 11px 5px -4px rgba(0, 0, 0, 0.42);
 }
 
-.project-list:hover{
+.project-list:hover {
     border-left: 5px solid blueviolet;
     cursor: pointer;
     transition-duration: 1s;
 }
 
-.title-and-collaps-option{
+.title-and-collaps-option {
     display: flex;
     justify-content: space-between;
     margin: 5px;
 }
 
-.tech-used-in-project{
-    margin-top: 20px;
+.tech-used-in-project {
     margin: 5px;
 }
 
@@ -47,36 +54,32 @@
     border-radius: 90px;
     padding: 8px;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.live-demo-button{
+.live-demo-button {
     background-color: green;
     border-radius: 90px;
     width: fit-content;
     margin: 5px;
     padding: 10px;
     color: white;
-
+    align-self: flex-start; /* ensures it's always at bottom left */
 }
 
-.live-demo-button a{
+.live-demo-button a {
     text-decoration: none;
     color: white;
-
+    padding: 10px;
 }
 
-
-.live-demo-button:hover{
+.live-demo-button:hover {
     background-color: blueviolet;
     transition-duration: 1s;
 }
 
-.live-demo-button a{
-    text-decoration: none;
-    padding: 10px;
-}
-
-.description{
+.description {
     margin: 5px;
 }
+
+

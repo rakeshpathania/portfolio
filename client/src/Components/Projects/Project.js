@@ -1,92 +1,104 @@
-import React from 'react';
-import ProjectList from './ProjectList';
+import React from "react";
+import ProjectList from "./ProjectList";
 import "./Project.css";
-import Zoom from 'react-reveal/Zoom';
+import Zoom from "react-reveal/Zoom";
 
 const Project = () => {
     const data = [
         {
-            name: 'Players Wanted',
-            desc: "This project helps you to connect with nearby people to play sports. There are two options for registration as a player and as an instructor. Where you can find the people near you through the map and connect them with the help of a chat module, and also you can take coaching for the particular game as per your interest and buy their various package from instructors. and the instructor can upload the video lesson for different games and set the package amount and duration accordingly.",
-            projectlink: "https://playerswanted.onrender.com/register",
-            techused:[
-                {techname: "Node.js"},
-                {techname: "Express.js"},
-                {techname: "MySql"},
-                {techname: "EJS"},
-                {techname: "Ajax"},
-                {techname: "JavaScript"},
-                {techname: "Socket.Io"},
-                {techname: "Stripe"},
-                {techname: "Google API's"},
-
-
-            ]
+            name: "EarthLink - Telecom Service Management Platform",
+            desc: `• Telecom Service Management Platform
+                   • Created backend services and provisioned NGINX to act as a reverse proxy, load balancer, and cache, boosting
+                     performance and reducing response time by 40%
+                   • Collaborated with clients to refine features, boosting delivery speed 40%.`,
+            projectlink: "https://www.earthlink.net/welcome/",
+            techused: [
+                { techname: "Node.js" },
+                { techname: "Express.js" },
+                { techname: "Fastify.js" },
+                { techname: "PostgreSQL" },
+                { techname: "JavaScript" },
+                { techname: "React" },
+                { techname: "Redis" },
+                { techname: "NGNINX" },
+                { techname: "PM2" },
+                { techname: "Kafka" },
+                { techname: "Google API's" },
+            ],
         },
         {
             name: `Snappy-Let's Chat`,
-            desc: "Snappy - Let's Chat is a real-time chat application built with Node.js and Express, leveraging Socket.io for fast and seamless communication. It offers end-to-end encryption (E2EE) to ensure secure messaging between users.",
+            desc: `• Developed end-to-end encrypted messaging with Socket.io for secure communication.
+                   • Implemented user authentication and real-time chat functionality using Node.js, Express.js, and Socket.io.
+                   • Integrated MongoDB for data storage and retrieval, ensuring efficient message storage and retrieval.
+                   • Facilitated cross-device chat and user presence tracking, increasing active user sessions by 30%.`,
             projectlink: "https://melodic-brioche-985840.netlify.app/login",
-            techused:[
-                {techname: "Node.js"},
-                {techname: "Express.js"},
-                {techname: "MongoDb"},
-                {techname: "React"},
-                {techname: "JavaScript"},
-                {techname: "Socket.Io"},
-
-            ]
+            techused: [
+                { techname: "Node.js" },
+                { techname: "Express.js" },
+                { techname: "MongoDb" },
+                { techname: "React" },
+                { techname: "JavaScript" },
+                { techname: "Socket.Io" },
+            ],
         },
         {
-            name: 'PaisaXC- A Crypto Exchange',
-            desc: "I contributed to a cryptocurrency exchange and trading platform in India, enabling users to buy, sell, and trade 100+ cryptocurrencies like BTC, XRP, ETH, and TRX. I developed the P2P trading module (similar to WazirX) for seamless transactions, integrated a buyer-seller chat for real-time negotiations, and built a support system for dispute resolution. Additionally, I managed backend APIs using Laravel for authentication and settings while implementing frontend API consumption with Vue.js to ensure a smooth user experience. This platform prioritizes security, speed, and efficiency in cryptocurrency trading. 🚀",
+            name: "PaisaXC- A Crypto Exchange",
+            desc: `• Managed Node.js APIs connected with a Vue.js frontend.
+                   • Implemented user authentication and real-time chat functionality using Node.js, Express.js, and Socket.io.
+                   • Structuring P2P trading and buyer-seller chat modules, improving retention by 20%.
+                   • Integrated MongoDB for data storage and retrieval, ensuring efficient message storage and retrieval.
+                   • Established secure dispute resolution and identity verification.`,
             projectlink: "https://www.demo.paisaxc.com/",
-            techused:[
-                {techname: "Laravel"},
-                {techname: "MySql"},
-                {techname: "Vue.Js"},
-                {techname: "Node.Js"},
-                {techname: "Express.Js"},
-                {techname: "JavaScript"},
-                {techname: "Socket.Io"},
-
-            ]
+            techused: [
+                { techname: "Laravel" },
+                { techname: "MySql" },
+                { techname: "Vue.Js" },
+                { techname: "Node.Js" },
+                { techname: "Express.Js" },
+                { techname: "JavaScript" },
+                { techname: "Socket.Io" },
+            ],
         },
         {
-            name: 'OSRJobs- A Job Portal',
-            desc: "OSR Job Portal is a comprehensive job search platform designed to connect job seekers with employers. It offers seamless job searching, direct applications, and third-party job integrations to enhance opportunities for users. Employers and administrators can manage job postings efficiently, including bulk imports via CSV. The portal also integrates Stripe for secure payment processing, making it a robust solution for job listings, premium postings, and other recruitment services.",
+            name: "OSRJobs- A Job Portal",
+            desc: `• Executed job posting, CSV import, and application workflows, streamlining hiring for over 50 employers.
+                   • Embedded Stripe’s webhook system to sync payment statuses across microservices in real-time, reducing payment
+                     processing delays by 45%.
+                   • Migrated legacy monoliths to microservices, improving scalability and performance by 30%.
+                   • Automated internal workflows by building an admin panel with React & Node.js, reducing operational time by
+                     40%.`,
             projectlink: "https://www.osrjobs.com/",
-            techused:[
-                {techname: "Node.js"},
-                {techname: "Express"},
-                {techname: "MongoDb"},
-                {techname: "NextJs"},
-                {techname: "JavaScript"},
-                {techname: "JWT/OAuth"},
-                {techname: "Stripe API"},
-                {techname: "AWS S3"},
-            ]
-        },  
-    ]
-  return (
-    <Zoom >
-    <div className='container project-section'>
-        <div className='section-title'>
-            <h5>Projects</h5>
-            <span className='line'></span>
-        </div>
-
-        <div className='row'>
-            {data.map((item,index)=>(
-                <div className='col-xl-6 col-lg-6 col-md-6 col-sm-12'>
-                    <ProjectList {...item}/>
+            techused: [
+                { techname: "Node.js" },
+                { techname: "Express" },
+                { techname: "MongoDb" },
+                { techname: "NextJs" },
+                { techname: "JavaScript" },
+                { techname: "JWT/OAuth" },
+                { techname: "Stripe API" },
+                { techname: "AWS S3" },
+            ],
+        },
+    ];
+    return (
+        <Zoom>
+            <div className="container project-section">
+                <div className="section-title">
+                    <h5>Projects</h5>
+                    <span className="line"></span>
                 </div>
-            ))}
-        </div>
-    </div>
-    </Zoom>
 
-  )
-}
+                <div className="row">
+                    {data.map((item, index) => (
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <ProjectList {...item} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </Zoom>
+    );
+};
 
-export default Project
+export default Project;

@@ -8,7 +8,13 @@ const WorkExperience = () => {
         {
             "companyname": "DigiMantra Labs Pvt. Ltd, Mohali, India",
             "position": "Node.js Developer",
-            "desc": "Building server-side applications and RESTful APIs using Node.js and Express.js. Implementing routing, middleware, and error handling. Integrating with databases, such as MySQL and MongoDB. Developing web applications using React. Implementing reusable UI components. Managing application state using Redux or other state management libraries. Implementing client-side routing using React Router. Designing and implementing database schemas for MySQL and MongoDB. Writing efficient and optimized database queries. Implementing data models and relationships. Creating Docker containers for application deployment and management. Building Docker images for different components of the application. Using Hygen to automate code generation and scaffolding. Creating templates and blueprints for generating code. Automating repetitive tasks and reducing development time.",
+            "desc": `• Designed scalable Node.js microservices, improving performance under high traffic by 50%.
+                     • Improved API performance by 40% through query enhancements and Redis caching.
+                     • Led sprint planning and mentored junior developers, enhancing team efficiency by 20%.
+                     • Streamlined deployments via CI/CD using GitHub Actions, reducing manual effort by 30%.
+                     • Architected and maintained key backend features using Nest.js and TypeScript, ensuring 100% type safety.
+                     • Engineered direct upload flow using S3 pre-signed URLs, improving performance and offloading 70% of server
+                       traffic.`,
             "year": "06/2023 – Present",
             "techskills": [
                 {
@@ -37,7 +43,12 @@ const WorkExperience = () => {
         {
             "companyname": "Cqlsys Technologies Pvt. Ltd, Mohali, India",
             "position": "Javascript Developer",
-            "desc": "Coded websites using HTML, CSS, JavaScript, and jQuery languages. Managed efficient SQL queries and data transport.Built APIs and data clients to consume APIs. Integrated third-party APIs from external applications into web platforms, front-end elements into applications. Developed web platform backends using Node.js and express frameworks. Developed the concept of technical solutions based on customer needs to ensure satisfaction. Contributed to the continual improvement of the design and development process, maintaining strong aspects while researching and providing recommendations for areas of improvement. Developed highly interactive web applications using JavaScript, HTML5, CSS, JSON, and Vue while integrating Restful APIs and external web services, ensuring high performance.",
+            "desc": `• Built over 40 RESTful APIs using Node.js, Express, and PostgreSQL.
+                     • Refined database schemas and queries, reducing execution times by 15%
+                     • Handled GitHub/GitLab branching strategies and workflows, improving team productivity by 25%.
+                     • Implemented CI/CD pipelines using GitHub Actions, reducing deployment time by 30%.
+                     • Utilized Docker for containerization, enhancing scalability and portability across environments.
+                     • Implemented keyset pagination to replace OFFSET, improving query performance by 60% on large datasets.`,
             "year": "01/2023 – 06/2023",
             "techskills": [
 
@@ -61,7 +72,12 @@ const WorkExperience = () => {
         {
             "companyname": "LBM Solutions, Mohali, India",
             "position": "Backend Developer",
-            "desc": "Write and manage API resources that can work across devices (to be used by front-end developers). Maintenance and enhancements on existing API's Experience in Authentication and authorization standards such as OAuth. Responsible for maintaining the good code quality by doing code review with team. Experience developing REST applications on modern MVC PHP frameworks such as Laravel 9. Good understanding of open-source projects Experience with REST APIs with a basic understanding of object-oriented programming (OOP) design patterns Experience using common third-party APIs Integration of data storage solutions like MySQL and MongoDB Worked with the Front-End team closely for API integration",
+            "desc": `• Delivered over 12 backend services using Laravel PHP & Node.js, enhancing system stability.
+                     • Revamped SQL queries for better efficiency, achieving a 20% drop in response time.
+                     • Ensured multi-platform API compatibility for a seamless user experience.
+                     • Implemented JWT authentication for secure user access.
+                     • Optimized database queries, reducing response times by 30%.
+                     • Secured user accounts using JWT & OAuth2 authentication.`,
             "year": "12/2021 – 01/2023",
             "techskills": [
                 {
@@ -122,9 +138,10 @@ const WorkExperience = () => {
                                     </div>
                                 ))}
                             </div>
-                            <p>
-                                {item.desc}
-                            </p>
+                            {item.desc.split('•').filter(Boolean).map((line, idx) => (
+                                <p key={idx}>• {line.trim()}</p>
+                            ))}
+
                         </VerticalTimelineElement>
                     ))}
                 </VerticalTimeline>

@@ -54,7 +54,7 @@
     background-color: yellowgreen;
 }
 
-@media (max-width:1000px){
+@media (max-width:1440px){
     .about-section{
         height: auto;
     }

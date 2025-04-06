@@ -3,7 +3,6 @@ import { FcExpand, FcCollapse } from "react-icons/fc";
 import "./Project.css";
 
 const ProjectList = ({ name, desc, techused, projectlink }) => {
-    console.log(projectlink,">>>>>>>>>>>");
     const [show, setShow] = useState(false);
 
     const handleShowandCollapse = () => {
@@ -11,7 +10,7 @@ const ProjectList = ({ name, desc, techused, projectlink }) => {
     }
     return (
         <div className={show ? 'project-list-opened project-list' : 'project-list'} id='project' onClick={handleShowandCollapse}
-            
+
         >
             <div className='title-and-collaps-option'>
                 <h5>
@@ -23,7 +22,25 @@ const ProjectList = ({ name, desc, techused, projectlink }) => {
 
             </div>
             <div className='description'>
-                {show ? (<p>{desc}</p>) : (<p>{desc.substring(0, 150)}...    </p>)}
+                {show ? (
+                    <ul className="list-disc ml-5">
+                        {desc.split('•').filter(Boolean).map((line, idx) => (
+                            <li key={idx}>{line.trim()}</li>
+                        ))}
+                    </ul>
+                ) : (
+                    <ul className="list-disc ml-5">
+                        {desc
+                            .split('•')
+                            .filter(Boolean)
+                            .slice(0, 2)
+                            .map((line, idx) => (
+                                <li key={idx}>{line.trim()}</li>
+                            ))}
+                        <li>...</li>
+                    </ul>
+                )}
+
             </div>
 
             <div className='row'>
