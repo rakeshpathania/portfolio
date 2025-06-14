@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectList from "./ProjectList";
 import "./Project.css";
-import Zoom from "react-reveal/Zoom";
+import { motion } from "framer-motion";
 
 const Project = () => {
     const data = [
@@ -82,22 +82,25 @@ const Project = () => {
         },
     ];
     return (
-        <Zoom>
-            <div className="container project-section">
-                <div className="section-title">
-                    <h5>Projects</h5>
-                    <span className="line"></span>
-                </div>
-
-                <div className="row">
-                    {data.map((item, index) => (
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <ProjectList {...item} />
-                        </div>
-                    ))}
-                </div>
+        <motion.div 
+            className="container project-section"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+        >
+            <div className="section-title">
+                <h5>Projects</h5>
+                <span className="line"></span>
             </div>
-        </Zoom>
+
+            <div className="row">
+                {data.map((item, index) => (
+                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12" key={index}>
+                        <ProjectList {...item} />
+                    </div>
+                ))}
+            </div>
+        </motion.div>
     );
 };
 

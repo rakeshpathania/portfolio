@@ -8,6 +8,8 @@
     background-color: #030303da;
     width: 95px;
     position: fixed;
+    z-index: 1000;
+    transition: width 0.3s ease;
 }
 .sidebar-expand {
     width: 230px;
@@ -26,6 +28,7 @@
     color: white;
     border-radius: 5px;
     margin-top: 50px;
+    z-index: 1001;
 }
 
 .container-fluid {

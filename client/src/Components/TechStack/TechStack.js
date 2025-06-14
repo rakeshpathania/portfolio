@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./TechStack.css";
-import Fade from 'react-reveal/Fade';
+import { motion } from 'framer-motion';
 const TechStack = () => {
 
     const data = [
@@ -85,16 +85,20 @@ const TechStack = () => {
 
             <div className='row'>
                 {data.slice(0, showMoreTechStack).map((item, index) => (
-                    <Fade right>
-                    <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12' key={index}>
+                    <motion.div 
+                        className='col-xl-4 col-lg-4 col-md-6 col-sm-12' 
+                        key={index}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
                         <div className={index === 0 ? 'tech-content-marked tech-content': 'tech-content' }>
                             <span className="tech-number" style={{ backgroundColor: colors[index] }}>
                                 {index + 1}
                             </span>
                             <p>{item.name}</p>
                         </div>
-                    </div>
-                    </Fade>
+                    </motion.div>
                 ))}
             </div>
 

@@ -3,7 +3,7 @@ import './Home.css';
 import Typewriter from 'typewriter-effect';
 import rakeshcv from './Rakesh-Pathania-Nodejs-resume.pdf';
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import Fade from 'react-reveal/Fade';
+import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 
 const Home = ({ theme, changeTheme }) => {
@@ -19,7 +19,11 @@ const Home = ({ theme, changeTheme }) => {
 
       </div>
       <div className='container home-content'>
-        <Fade right>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h1>Hi I'm Rakesh Pathania</h1>
           <h3>
             <Typewriter
@@ -31,24 +35,26 @@ const Home = ({ theme, changeTheme }) => {
               }}
             />
           </h3>
-        </Fade>
-        <Fade bottom>
-          <div className='button-for-action'>
+        </motion.div>
+        <motion.div 
+          className='button-for-action'
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Link to='contact'
+            spy={true}
+            smooth={true}
+            duration={100}
+            offset={-100}
+          >
+            <div className='hire-me-button'>Hire Me  </div>
+          </Link>
 
-            <Link to='contact'
-              spy={true}
-              smooth={true}
-              duration={100}
-              offset={-100}
-            >
-              <div className='hire-me-button'>Hire Me  </div>
-            </Link>
-
-            <div className='get-resume-button' onClick={handleDownloadCV}>
-              Get CV
-            </div>
+          <div className='get-resume-button' onClick={handleDownloadCV}>
+            Get CV
           </div>
-        </Fade>
+        </motion.div>
       </div>
     </div>
   );

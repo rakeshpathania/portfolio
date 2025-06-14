@@ -10,7 +10,7 @@ import technology from './technology.jpg'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Zoom from 'react-reveal/Zoom';
+import { motion } from 'framer-motion';
 
 
 const Interest = () => {
@@ -96,8 +96,12 @@ const Interest = () => {
       <div className='interest-slider'>
         <Slider {...settings} >
           {data.map((item, index) => (
-            <Zoom>
-            <div className='content-slider-main'>
+            <motion.div 
+              className='content-slider-main'
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className='content-slider' key={index}>
                 <img src={item.image} alt='interest-image' className='center-image' />
                 <div className='interest-description'>
@@ -105,8 +109,7 @@ const Interest = () => {
                 </div>
                 <h5 className='interest-heading'>{item.interest} </h5>
               </div>
-            </div>
-            </Zoom>
+            </motion.div>
 
           ))}
         </Slider>
